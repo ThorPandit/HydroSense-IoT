@@ -1,0 +1,58 @@
+wifi for overall WiFi configuration
+wifi.sta for station mode functions
+wifi.ap for wireless access point (WAP or simply AP) functions
+wifi.ap.dhcp for DHCP server control
+wifi.eventmon for wifi event monitor
+wifi.monitor for wifi monitor mode
+wifi.getchannel()	Gets the current WiFi channel.
+wifi.getcountry()	Get the current country info.
+wifi.getdefaultmode()	Gets default WiFi operation mode.
+wifi.getmode()	Gets WiFi operation mode.
+wifi.getphymode()	Gets WiFi physical mode.
+wifi.nullmodesleep()	Configures whether or not WiFi automatically goes to sleep in NULL_MODE.
+wifi.resume()	Wake up WiFi from suspended state or cancel pending wifi suspension.
+wifi.setcountry()	Set the current country info.
+wifi.setmode()	Configures the WiFi mode to use.
+wifi.setphymode()	Sets WiFi physical mode.
+wifi.setmaxtxpower()	Sets WiFi maximum TX power.
+wifi.startsmart()	Starts to auto configuration, if success set up SSID and password automatically.
+wifi.stopsmart()	Stops the smart configuring process.
+wifi.suspend()	Suspend Wifi to reduce current consumption.
+wifi.sta.autoconnect()	Auto connects to AP in station mode.
+wifi.sta.changeap()	Select Access Point from list returned by wifi.
+wifi.sta.clearconfig()	Clears the currently saved WiFi station configuration, erasing it from the flash.
+wifi.sta.config()	Sets the WiFi station configuration.
+wifi.sta.connect()	Connects to the configured AP in station mode.
+wifi.sta.disconnect()	Disconnects from AP in station mode.
+wifi.sta.getap()	Scans AP list as a Lua table into callback function.
+wifi.sta.getapindex()	Get index of current Access Point stored in AP cache.
+wifi.sta.getapinfo()	Get information of APs cached by ESP8266 station.
+wifi.sta.getbroadcast()	Gets the broadcast address in station mode.
+wifi.sta.getconfig()	Gets the WiFi station configuration.
+wifi.sta.getdefaultconfig()	Gets the default WiFi station configuration stored in flash.
+wifi.sta.gethostname()	Gets current station hostname.
+wifi.sta.getip()	Gets IP address, netmask, and gateway address in station mode.
+wifi.sta.getmac()	Gets MAC address in station mode.
+wifi.sta.getrssi()	Get RSSI(Received Signal Strength Indicator) of the Access Point which ESP8266 station connected to.
+wifi.sta.setaplimit()	Set Maximum number of Access Points to store in flash.
+wifi.sta.sethostname()	Sets station hostname.
+wifi.sta.setip()	Sets IP address, netmask, gateway address in station mode.
+wifi.sta.setmac()	Sets MAC address in station mode.
+wifi.sta.sleeptype()	Configures the WiFi modem sleep type to be used while station is connected to an Access Point.
+wifi.sta.status()	Gets the current status in station mode.
+wifi.ap.config()	Sets SSID and password in AP mode.
+wifi.ap.deauth()	Deauths (forcibly removes) a client from the ESP access point by sending a corresponding IEEE802.
+wifi.ap.getbroadcast()	Gets broadcast address in AP mode.
+wifi.ap.getclient()	Gets table of clients connected to device in AP mode.
+wifi.ap.getconfig()	Gets the current SoftAP configuration.
+wifi.ap.getdefaultconfig()	Gets the default SoftAP configuration stored in flash.
+wifi.ap.getip()	Gets IP address, netmask and gateway in AP mode.
+wifi.ap.getmac()	Gets MAC address in AP mode.
+wifi.ap.setip()	Sets IP address, netmask and gateway address in AP mode.
+wifi.ap.setmac()	Sets MAC address in AP mode.
+wifi.ap.dhcp.config()	Configure the dhcp service.
+wifi.ap.dhcp.start()	Starts the DHCP service.
+wifi.ap.dhcp.stop()	Stops the DHCP service.
+wifi.eventmon.register()	Register/unregister callbacks for WiFi event monitor.
+wifi.eventmon.unregister()	Unregister callbacks for WiFi event monitor.
+wifi.eventmon.reason	Table containing disconnect reasons.
