@@ -58,3 +58,30 @@ wifi.ap.dhcp.stop()	Stops the DHCP service.
 wifi.eventmon.register()	Register/unregister callbacks for WiFi event monitor.
 wifi.eventmon.unregister()	Unregister callbacks for WiFi event monitor.
 wifi.eventmon.reason	Table containing disconnect reasons.
+
+-----------Process--------------
+1. wifi.setmode()
+Configures the WiFi mode to use. NodeMCU can run in one of four WiFi modes:
+  1.Station mode, where the NodeMCU device joins an existing network
+  2.Access point (AP) mode, where it creates its own network that others can join
+  3.Station + AP mode, where it both creates its own network while at the same time being joined to another existing network
+  4.WiFi off
+  Syntax:
+wifi.setmode(mode[, save])
+  mode:
+  1. wifi.STATION
+  2. wifi.SOFTAP
+  3. wifi.STATIONAP
+  4. wifi.NULLMODE
+  save: "save wifi mode to flash"
+  TRUE: WiFi mode configuration will be retained through power cycle. (Default)
+  FALSE: WiFi mode configuration will not be retained through power cycle.
+
+2. wifi.sta.config(station_config)
+example:
+  wifi.sta.config(SSID,Password)
+
+3. static IP assignment:
+wifi.sta.setip()
+
+4. wifi.sta.setip
