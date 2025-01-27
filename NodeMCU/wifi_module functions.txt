@@ -85,3 +85,19 @@ example:
 wifi.sta.setip()
 
 4. wifi.sta.setip
+wifi.sta.setip(cfg)
+cfg=
+{
+  ip = "192.168.0.111",
+  netmask = "255.255.255.0",
+  gateway = "192.168.0.1"
+}
+
+--Fetching ip address
+print("fetching IP address")
+tmr.alarm(1,10000,tmr.ALARM_SINGLE, function() print(wifi.sta.getip())
+print(tmr.ALARM_SINGLE)
+end)
+
+
+
