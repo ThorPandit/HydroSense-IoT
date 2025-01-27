@@ -1,0 +1,4 @@
+Open a telnet server based on the provided parameters.
+telnet:open(ssid, pwd, port)
+ssid and password. Strings. SSID and Password for the Wifi network. If these are nil then the wifi is assumed to be configured or auto-configured.
+port. Integer TCP listening port for the Telnet service. The default is 2323
