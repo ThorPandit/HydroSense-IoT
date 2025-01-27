@@ -1,3 +1,5 @@
+Link: https://nodemcu.readthedocs.io/en/release/modules/wifi/#wifi-module
+
 wifi for overall WiFi configuration
 wifi.sta for station mode functions
 wifi.ap for wireless access point (WAP or simply AP) functions
