@@ -1,0 +1,51 @@
+--net Module--
+
+Constants	Constants to be used in other functions: net.
+net.createConnection()	Creates a TCP client.
+net.createServer()	Creates a TCP listening socket (a server).
+net.createUDPSocket()	Creates an UDP socket.
+net.ifinfo()	Return information about a network interface, specified by index.
+net.multicastJoin()	Join multicast group.
+net.multicastLeave()	Leave multicast group.
+net.server:close()	Closes the server.
+net.server:listen()	Listen on port from IP address.
+net.server:getaddr()	Returns server local address/port.
+net.socket:close()	Closes socket.
+net.socket:connect()	Connect to a remote server.
+net.socket:dns()	Provides DNS resolution for a hostname.
+net.socket:getpeer()	Retrieve port and ip of remote peer.
+net.socket:getaddr()	Retrieve local port and ip of socket.
+net.socket:hold()	Throttle data reception by placing a request to block the TCP receive function.
+net.socket:on()	Register callback functions for specific events.
+net.socket:send()	Sends data to remote peer.
+net.socket:ttl()	Changes or retrieves Time-To-Live value on socket.
+net.socket:unhold()	Unblock TCP receiving data by revocation of a preceding hold().
+net.udpsocket:close()	Closes UDP socket.
+net.udpsocket:listen()	Listen on port from IP address.
+net.udpsocket:on()	Register callback functions for specific events.
+net.udpsocket:send()	Sends data to specific remote peer.
+net.udpsocket:dns()	Provides DNS resolution for a hostname.
+net.udpsocket:getaddr()	Retrieve local port and ip of socket.
+net.udpsocket:ttl()	Changes or retrieves Time-To-Live value on socket.
+net.dns.getdnsserver()	Gets the IP address of the DNS server used to resolve hostnames.
+net.dns.resolve()	Resolve a hostname to an IP address.
+net.dns.setdnsserver()	Sets the IP of the DNS server used to resolve hostnames.
+
+-----Server module
+Creates a TCP listening socket (a server).
+net.createServer(timeout)
+  timeout: seconds until disconnecting an inactive client; 1~28'800 seconds, 30 sec by default.
+  e.g: servercreated=net.createServer(net.TCP,30)
+
+----net.server Module
+net.server:listen()
+Listen on port from IP address.
+net.server.listen([port],[ip],function(net.socket))
+  port: port number, can be omitted (random port will be chosen)
+  ip:   IP address string, can be omitted
+  function(net.socket) :callback function, pass to caller function as param if a connection is created successfully
+
+  What is net.socket?
+net.socket is a socket object that represents the connection between a server and a client.
+Whenever a client connects to your server (set up with net.server.listen), a net.socket object is created to handle the communication with that specific client.
+This object is used to send data to the client, receive data from the client, and manage the connection.
